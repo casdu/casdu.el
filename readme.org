@@ -1,0 +1,5 @@
+Instead of pressing the capture template when writing a new idea, this
+file makes this interaction function `casdu/org-roam-find-file` as a
+separated function.
+
+`Org-roam` is designed for a single person, I believe it is not.
