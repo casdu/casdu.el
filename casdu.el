@@ -1,3 +1,5 @@
+;; functions for CASDU copy from org-roam
+
 (defcustom casdu/org-roam-capture-immediate-template
   (append (car casdu/org-roam-capture-templates) '(:immediate-finish t))
   "Capture template to use for immediate captures in Org-roam.
@@ -109,3 +111,5 @@ GOTO and KEYS argument have the same functionality as
             (eq org-roam-capture-function 'org-capture))
         (org-capture goto keys)
       (funcall-interactively org-roam-capture-function))))
+
+(provide 'casdu)
