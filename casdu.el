@@ -1,5 +1,12 @@
 ;; functions for CASDU copy from org-roam
 
+(setq casdu/org-roam-capture-templates
+      '(("p" "casdu" plain (function org-roam--capture-get-point)
+         "%?"
+         :file-name "casdu-brain/%<%Y%m%d%H%M%S>-${slug}"
+         :head "#+TITLE: ${title}\n#+CREATED:       %U\n#+LAST_MODIFIED: %U\n\n"
+         :unnarrowed t)))
+
 (defcustom casdu/org-roam-capture-immediate-template
   (append (car casdu/org-roam-capture-templates) '(:immediate-finish t))
   "Capture template to use for immediate captures in Org-roam.
@@ -51,13 +58,6 @@ Template string   :\n%v")
                  ((const :format "%v " :tree-type) (const week))
                  ((const :format "%v " :table-line-pos) (string))
                  ((const :format "%v " :kill-buffer) (const t))))))
-
-(setq casdu/org-roam-capture-templates
-      '(("p" "casdu" plain (function org-roam--capture-get-point)
-         "%?"
-         :file-name "casdu-brain/%<%Y%m%d%H%M%S>-${slug}"
-         :head "#+TITLE: ${title}\n#+CREATED:       %U\n#+LAST_MODIFIED: %U\n\n"
-         :unnarrowed t)))
 
 (defun casdu/org-roam-find-file-immediate (arg &rest args)
   "Find and open an Org-roam file.
