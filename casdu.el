@@ -3,7 +3,7 @@
 (setq casdu/org-roam-capture-templates
       '(("p" "casdu" plain (function org-roam--capture-get-point)
          "%?"
-         :file-name "casdu-brain/%<%Y%m%d%H%M%S>-${slug}"
+         :file-name "casdu-brain/%<%Y%m%d%H%M%S>"
          :head "#+TITLE: ${title}\n#+CREATED:       %U\n#+LAST_MODIFIED: %U\n\n"
          :unnarrowed t)))
 
