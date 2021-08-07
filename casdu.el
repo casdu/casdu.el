@@ -349,7 +349,7 @@ you can escape ambiguous cases with a backward slash, e.g., \\%i."
 
 (setq casdu/org-capture-templates
       '(("d" "default" plain "%?" :if-new
-         (file+head "casdu-brain/pages/%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+created:       %U\n#+last_modified: %U\n#+startup: showall\n\n")
+         (file+head "casdu-brain/pages/%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n#+created:       %U\n#+last_modified: %U\n#+startup: showall\n#+filetags: casdu\n")
          :unnarrowed t)))
 
 (provide 'casdu)
